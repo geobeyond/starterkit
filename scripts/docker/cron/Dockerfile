@@ -18,6 +18,8 @@ RUN chmod +x /root/*.py
 COPY crontab_monitoring /etc/cron.d/crontab_monitoring
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/crontab_monitoring
+# Run crontab monitoring command
+RUN crontab /etc/cron.d/crontab_monitoring
 
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
