@@ -33,7 +33,7 @@ services:
       - ./scripts/docker/env/production/dbsos.env
 
   elasticsearch:
-    image: elasticsearch
+    image: elasticsearch:6.5.0
     restart: unless-stopped
     container_name: elasticsearch4${COMPOSE_PROJECT_NAME}
     stdin_open: true
